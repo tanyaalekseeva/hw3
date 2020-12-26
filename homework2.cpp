@@ -1,10 +1,10 @@
- #include <bits/stdc++.h> 
+ #include <cstddef> 
 
 using namespace std; 
 
 { 
 	int data; 
-	Node *prev, *next; 
+	ciass Node *prev, *next; 
 	 static Node* getnode(int data) 
 	{ 
 		Node* newNode = (Node*)malloc(sizeof(Node)); 
@@ -18,13 +18,13 @@ class Deque
 { 
 	Node* front; 
 	Node* rear; 
-	int Size; 
+	Node* size; 
 
 public: 
 	Deque() 
 	{ 
 		front = rear = NULL; 
-		Size = 0; 
+		size = 0; 
 	} 
 
 	void insertFront(int data); 
@@ -81,8 +81,6 @@ void Deque::insertRear(int data)
 		 
 		if (rear == NULL) 
 			front = rear = newNode; 
-
-		 
 		else
 		{ 
 			newNode->prev = rear; 
@@ -128,16 +126,16 @@ void Deque::deleteRear()
 	 
 	else
 	{ 
-		Node* temp = rear; 
-		rear = rear->prev; 
+        Node* temp = rear; 
+	rear = rear->prev; 
 
-		 if (rear == NULL) 
-			front = NULL; 
+        if (rear == NULL) 
+        front = NULL; 
 		else
-			rear->next = NULL; 
-		free(temp); 
+        rear->next = NULL; 
+	free(temp); 
 
-		 Size--; 
+         Size--; 
 	} 
 } 
 
