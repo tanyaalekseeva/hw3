@@ -28,4 +28,5 @@ int main()
         << "front is: " << dq.getFront() << endl; 
   
     return 0; 
+    
 } 
