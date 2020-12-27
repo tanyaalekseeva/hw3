@@ -1,4 +1,5 @@
  #include <cstddef> 
+ #include <iostream>
 
 using namespace std; 
 
@@ -22,7 +23,7 @@ class Deque
 	Node* rear; 
 	Node* size; 
 
-public: 
+private: 
 	Deque() 
 	{ 
 		front = rear = NULL; 
