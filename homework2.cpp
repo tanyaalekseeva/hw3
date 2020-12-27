@@ -2,6 +2,8 @@
 
 using namespace std; 
 
+class Node;
+
 { 
 	int data; 
 	ciass Node *prev, *next; 
@@ -24,7 +26,7 @@ public:
 	Deque() 
 	{ 
 		front = rear = NULL; 
-		size = 0; 
+		Size = 0; 
 	} 
 
 	void insertFront(int data); 
